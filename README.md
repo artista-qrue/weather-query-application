@@ -111,3 +111,25 @@ curl "http://localhost:8080/weather"
 ## Postman Collection
 
 A Postman collection is available in the `postman_collection.json` file. You can import this file into Postman to easily test the API endpoints. 
+
+## Database
+
+The application logs every successful weather query to a database. By default, it uses SQLite, and the database file is named `weather.sqlite`.
+
+### Table Schema
+
+The data is stored in the `weather_queries` table with the following schema:
+
+-   `id` (INTEGER, PRIMARY KEY AUTOINCREMENT)
+-   `location` (TEXT)
+-   `service_1_temperature` (REAL)
+-   `service_2_temperature` (REAL)
+-   `request_count` (INTEGER) - The number of grouped requests for this query.
+-   `created_at` (DATETIME)
+
+### Verifying Logs
+
+You can check the logs by querying the database directly. For SQLite, you can use the following command in your terminal:
+
+```sh
+sqlite3 -header weather.sqlite "SELECT * FROM weather_queries;"
