@@ -1,0 +1,35 @@
+
+{
+  "info": {
+    "_postman_id": "c1f7a2f0-7b3c-4e8e-8e2b-2d1c1b0a8a7c",
+    "name": "Weather Query API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Weather by Location",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/weather?q=Istanbul",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "weather"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "Istanbul"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+} 

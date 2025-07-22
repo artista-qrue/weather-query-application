@@ -1,0 +1,10 @@
+
+server:
+  port: 8080
+
+database:
+  dsn: "weather.sqlite"
+
+weather_api:
+  weather_api_key: "147d644004414106a2f75650232001"
+  weather_stack_key: "0450494f331567e4cf5464bae590dec0" 
